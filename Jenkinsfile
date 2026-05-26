@@ -1,14 +1,11 @@
+@Library('my-shared-lib') _
+
 pipeline {
-  
     agent any
 
     tools {
         maven 'maven'
         jdk 'jdk21'
-    }
-
-    environment {
-        APP_NAME = "employee-service"
     }
 
     stages {
@@ -21,19 +18,17 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean package'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                sh 'mvn test'
+                script {
+                    mavenbuild()
+                }
             }
         }
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t employee-service:latest .'
+                script {
+                    dockerBuild()
+                }
             }
         }
 
