@@ -1,1 +1,76 @@
+# =========================
+# JAVA / MAVEN
+# =========================
+target/
+*.class
+*.jar
+*.war
+*.ear
 
+# Maven Wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# =========================
+# LOG FILES
+# =========================
+logs/
+*.log
+
+# =========================
+# IDE FILES
+# =========================
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# =========================
+# OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# ENV / SECRETS
+# =========================
+.env
+.env.*
+application-prod.properties
+secrets.properties
+
+# =========================
+# TEST REPORTS
+# =========================
+surefire-reports/
+failsafe-reports/
+
+# =========================
+# COVERAGE REPORTS
+# =========================
+coverage/
+jacoco.exec
+/site/
+
+# =========================
+# DOCKER
+# =========================
+docker-compose.override.yml
+
+# =========================
+# TEMP FILES
+# =========================
+tmp/
+temp/
+
+# =========================
+# JENKINS
+# =========================
+workspace/
